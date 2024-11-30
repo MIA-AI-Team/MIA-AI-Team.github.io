@@ -32,8 +32,8 @@
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="From Words to Vectors: The Journey of Word Embeddings" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="A hub for AI enthusiasts to collaborate on projects, review papers, write blogs, give sessions, and share insights on AI podcasts." />
-<meta property="og:description" content="A hub for AI enthusiasts to collaborate on projects, review papers, write blogs, give sessions, and share insights on AI podcasts." />
+<meta name="description" content="Have you ever wondered how AI models like Chat GPT and Gemini see words and sentences? Well, just like everything with AI, it’s all numbers! Words and sentences are converted to “vectors” before being passed to AI models. Vectors, if you’re not familiar with them, are just a list of numbers. As we shall see in this post, current AI models represent each word in human language by a unique list of numbers, but where it gets REALLY interesting is that the AI learns those numbers for every word completely on its own. You just have to give it a ton of data, and by data, we’re talking about a large corpus of human text, such as all of Wikipedia for example. Types of Embeddings This blog post will mostly focus on Word and Document embedding. However, the idea of embeddings applies to so much more. Embeddings, in general, are a way to convert some object, such as a word, sentence, or even an image into a vector. There are many types of embeddings and different approaches for each. This list is only a small example of the many kinds of embeddings that exist out there: Word Embeddings Numerical representations of words capture semantic relationships, allowing computers to understand and process language. Document/Sentence Embeddings Document/sentence embeddings extend the concept of word embeddings to represent entire documents or sentences as single vectors. These embeddings capture the overall meaning and context of the text. These embeddings help in tasks like semantic search, document clustering, and text summarization. Image Embeddings Image embeddings are numerical representations of images, mapping them to dense vectors in a high-dimensional space. These vectors capture an image&#39;s features, such as color, texture, and shape. Graph Embeddings Graph embeddings are numerical representations of nodes in a graph, mapping them to dense vectors in a low-dimensional space. These vectors capture the structural and semantic relationships between nodes in the graph. What are Word Embeddings? Well, word embeddings mean converting a word into a vector. To be more Mathematically precise, we’re mapping, or “embedding”, each word to some vector in a d-dimensional vector space, where d is the dimension of the vector and is the same for all words. For example, if each word gets mapped to a list of 300 numbers, our word embeddings convert each word to a vector in a 300-dimensional vector space. But how exactly do those mappings work? Well, let’s dive deeper!" />
+<meta property="og:description" content="Have you ever wondered how AI models like Chat GPT and Gemini see words and sentences? Well, just like everything with AI, it’s all numbers! Words and sentences are converted to “vectors” before being passed to AI models. Vectors, if you’re not familiar with them, are just a list of numbers. As we shall see in this post, current AI models represent each word in human language by a unique list of numbers, but where it gets REALLY interesting is that the AI learns those numbers for every word completely on its own. You just have to give it a ton of data, and by data, we’re talking about a large corpus of human text, such as all of Wikipedia for example. Types of Embeddings This blog post will mostly focus on Word and Document embedding. However, the idea of embeddings applies to so much more. Embeddings, in general, are a way to convert some object, such as a word, sentence, or even an image into a vector. There are many types of embeddings and different approaches for each. This list is only a small example of the many kinds of embeddings that exist out there: Word Embeddings Numerical representations of words capture semantic relationships, allowing computers to understand and process language. Document/Sentence Embeddings Document/sentence embeddings extend the concept of word embeddings to represent entire documents or sentences as single vectors. These embeddings capture the overall meaning and context of the text. These embeddings help in tasks like semantic search, document clustering, and text summarization. Image Embeddings Image embeddings are numerical representations of images, mapping them to dense vectors in a high-dimensional space. These vectors capture an image&#39;s features, such as color, texture, and shape. Graph Embeddings Graph embeddings are numerical representations of nodes in a graph, mapping them to dense vectors in a low-dimensional space. These vectors capture the structural and semantic relationships between nodes in the graph. What are Word Embeddings? Well, word embeddings mean converting a word into a vector. To be more Mathematically precise, we’re mapping, or “embedding”, each word to some vector in a d-dimensional vector space, where d is the dimension of the vector and is the same for all words. For example, if each word gets mapped to a list of 300 numbers, our word embeddings convert each word to a vector in a 300-dimensional vector space. But how exactly do those mappings work? Well, let’s dive deeper!" />
 <link rel="canonical" href="http://localhost:4000/posts/embeddings/" />
 <meta property="og:url" content="http://localhost:4000/posts/embeddings/" />
 <meta property="og:site_name" content="MIA AI Team" />
@@ -43,7 +43,7 @@
 <meta property="twitter:title" content="From Words to Vectors: The Journey of Word Embeddings" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-11-02T14:00:00+02:00","datePublished":"2024-11-02T14:00:00+02:00","description":"A hub for AI enthusiasts to collaborate on projects, review papers, write blogs, give sessions, and share insights on AI podcasts.","headline":"From Words to Vectors: The Journey of Word Embeddings","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/embeddings/"},"url":"http://localhost:4000/posts/embeddings/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-11-02T14:00:00+02:00","datePublished":"2024-11-02T14:00:00+02:00","description":"Have you ever wondered how AI models like Chat GPT and Gemini see words and sentences? Well, just like everything with AI, it’s all numbers! Words and sentences are converted to “vectors” before being passed to AI models. Vectors, if you’re not familiar with them, are just a list of numbers. As we shall see in this post, current AI models represent each word in human language by a unique list of numbers, but where it gets REALLY interesting is that the AI learns those numbers for every word completely on its own. You just have to give it a ton of data, and by data, we’re talking about a large corpus of human text, such as all of Wikipedia for example. Types of Embeddings This blog post will mostly focus on Word and Document embedding. However, the idea of embeddings applies to so much more. Embeddings, in general, are a way to convert some object, such as a word, sentence, or even an image into a vector. There are many types of embeddings and different approaches for each. This list is only a small example of the many kinds of embeddings that exist out there: Word Embeddings Numerical representations of words capture semantic relationships, allowing computers to understand and process language. Document/Sentence Embeddings Document/sentence embeddings extend the concept of word embeddings to represent entire documents or sentences as single vectors. These embeddings capture the overall meaning and context of the text. These embeddings help in tasks like semantic search, document clustering, and text summarization. Image Embeddings Image embeddings are numerical representations of images, mapping them to dense vectors in a high-dimensional space. These vectors capture an image&#39;s features, such as color, texture, and shape. Graph Embeddings Graph embeddings are numerical representations of nodes in a graph, mapping them to dense vectors in a low-dimensional space. These vectors capture the structural and semantic relationships between nodes in the graph. What are Word Embeddings? Well, word embeddings mean converting a word into a vector. To be more Mathematically precise, we’re mapping, or “embedding”, each word to some vector in a d-dimensional vector space, where d is the dimension of the vector and is the same for all words. For example, if each word gets mapped to a list of 300 numbers, our word embeddings convert each word to a vector in a 300-dimensional vector space. But how exactly do those mappings work? Well, let’s dive deeper!","headline":"From Words to Vectors: The Journey of Word Embeddings","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/embeddings/"},"url":"http://localhost:4000/posts/embeddings/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -110,8 +110,6 @@
 
   <!-- 3rd-party Dependencies -->
 
-  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.32.2/dist/tocbot.min.css">
   
 
   
@@ -1259,7 +1257,7 @@
 
 
 
-<article class="px-1" data-toc="true">
+<article class="px-1" data-toc="false">
   <header>
     <h1 data-toc-skip>From Words to Vectors: The Journey of Word Embeddings</h1>
     
@@ -1333,7 +1331,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="4107 words"
+  title="4105 words"
 >
   <em>22 min</em> read</span>
 
@@ -1343,49 +1341,9 @@
   </header>
 
   
-    <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
-      <span class="label text-truncate">From Words to Vectors: The Journey of Word Embeddings</span>
-      <button type="button" class="toc-trigger btn me-1">
-        <i class="fa-solid fa-list-ul fa-fw"></i>
-      </button>
-    </div>
-
-    <button id="toc-solo-trigger" type="button" class="toc-trigger btn btn-outline-secondary btn-sm">
-      <span class="label ps-2 pe-1">Contents</span>
-      <i class="fa-solid fa-angle-right fa-fw"></i>
-    </button>
-
-    <dialog id="toc-popup" class="p-0">
-      <div class="header d-flex flex-row align-items-center justify-content-between">
-        <div class="label text-truncate py-2 ms-4">From Words to Vectors: The Journey of Word Embeddings</div>
-        <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
-          <i class="fas fa-close"></i>
-        </button>
-      </div>
-      <div id="toc-popup-content" class="px-4 py-3 pb-4"></div>
-    </dialog>
-  
 
   <div class="content">
-    <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Embeddings</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        .question {
-            margin: 20px 0;
-        }
-    </style>
-</head>
-
-<body>
+    <body>
     <p>Have you ever wondered how AI models like Chat GPT and Gemini see words and sentences? Well, just like everything
         with AI, it’s all numbers! Words and sentences are converted to “vectors” before being passed to AI models.
         Vectors, if you’re not familiar with them, are just a list of numbers. As we shall see in this post, current AI
@@ -2232,8 +2190,6 @@
     
     </script>
 </body>
-
-</html>
   </div>
 
   <div class="post-tail-wrapper text-muted">
@@ -2439,12 +2395,6 @@
 
 
 
-
-  <div class="toc-border-cover z-3"></div>
-  <section id="toc-wrapper" class="position-sticky ps-0 pe-4">
-    <h2 class="panel-heading ps-3 pb-2 mb-0">Contents</h2>
-    <nav id="toc"></nav>
-  </section>
 
 
             

@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>MIA AI Team</title>
   <subtitle>A hub for AI enthusiasts to collaborate on projects, review papers, write blogs, give sessions, and share insights on AI podcasts.</subtitle>
-  <updated>2024-11-30T23:33:29+02:00</updated>
+  <updated>2024-12-01T01:46:05+02:00</updated>
   <author>
     <name>mia-ai-team</name>
     <uri>http://localhost:4000/</uri>
@@ -38,15 +38,10 @@
     
   
 
-  <summary>Word Embeddings
-    
-
-
-
-    Have you ever wondered how AI models like Chat GPT and Gemini see words and sentences? Well, just like everything
+  <summary>Have you ever wondered how AI models like Chat GPT and Gemini see words and sentences? Well, just like everything
         with AI, it’s all numbers! Words and sentences are converted to “vectors” before being passed to AI models.
         Vectors, if you’re not familiar with them, are just a list of numbers. As we shall see in this post, current AI
-        models repr...</summary>
+        models represent each word in human lan...</summary>
 
   </entry>
 
