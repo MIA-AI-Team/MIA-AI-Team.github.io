@@ -1,0 +1,55 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>MIA AI Team</title>
+  <subtitle>A hub for AI enthusiasts to collaborate on projects, review papers, write blogs, give sessions, and share insights on AI podcasts.</subtitle>
+  <updated>2024-11-30T22:57:29+02:00</updated>
+  <author>
+    <name>mia-ai-team</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
+  <rights> © 2024 mia-ai-team </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>From Words to Vectors: The Journey of Word Embeddings</title>
+    <link href="http://localhost:4000/posts/embeddings/" rel="alternate" type="text/html" title="From Words to Vectors: The Journey of Word Embeddings" />
+    <published>2024-11-02T14:00:00+02:00</published>
+  
+    <updated>2024-11-02T14:00:00+02:00</updated>
+  
+    <id>http://localhost:4000/posts/embeddings/</id>
+    <content type="text/html" src="http://localhost:4000/posts/embeddings/" />
+    <author>
+      <name>mia-ai-team</name>
+    </author>
+
+  
+    
+    <category term="nlp" />
+    
+  
+
+  <summary>Word Embeddings
+    
+
+
+
+    Have you ever wondered how AI models like Chat GPT and Gemini see words and sentences? Well, just like everything
+        with AI, it’s all numbers! Words and sentences are converted to “vectors” before being passed to AI models.
+        Vectors, if you’re not familiar with them, are just a list of numbers. As we shall see in this post, current AI
+        models repr...</summary>
+
+  </entry>
+
+</feed>
+
+
