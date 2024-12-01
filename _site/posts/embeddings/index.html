@@ -45,7 +45,7 @@
 <meta name="twitter:site" content="@twitter_username" />
 <meta name="twitter:creator" content="@Ahmed Gabr" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ahmed Gabr","url":"https://github.com/ahmedoy"},"dateModified":"2024-12-01T01:47:19+02:00","datePublished":"2024-11-02T14:00:00+02:00","description":"Have you ever wondered how AI models like Chat GPT and Gemini see words and sentences? Well, just like everything with AI, it’s all numbers! Words and sentences are converted to “vectors” before being passed to AI models. Vectors, if you’re not familiar with them, are just a list of numbers. As we shall see in this post, current AI models represent each word in human language by a unique list of numbers, but where it gets REALLY interesting is that the AI learns those numbers for every word completely on its own. You just have to give it a ton of data, and by data, we’re talking about a large corpus of human text, such as all of Wikipedia for example. Types of Embeddings This blog post will mostly focus on Word and Document embedding. However, the idea of embeddings applies to so much more. Embeddings, in general, are a way to convert some object, such as a word, sentence, or even an image into a vector. There are many types of embeddings and different approaches for each. This list is only a small example of the many kinds of embeddings that exist out there: Word Embeddings Numerical representations of words capture semantic relationships, allowing computers to understand and process language. Document/Sentence Embeddings Document/sentence embeddings extend the concept of word embeddings to represent entire documents or sentences as single vectors. These embeddings capture the overall meaning and context of the text. These embeddings help in tasks like semantic search, document clustering, and text summarization. Image Embeddings Image embeddings are numerical representations of images, mapping them to dense vectors in a high-dimensional space. These vectors capture an image&#39;s features, such as color, texture, and shape. Graph Embeddings Graph embeddings are numerical representations of nodes in a graph, mapping them to dense vectors in a low-dimensional space. These vectors capture the structural and semantic relationships between nodes in the graph. What are Word Embeddings? Well, word embeddings mean converting a word into a vector. To be more Mathematically precise, we’re mapping, or “embedding”, each word to some vector in a d-dimensional vector space, where d is the dimension of the vector and is the same for all words. For example, if each word gets mapped to a list of 300 numbers, our word embeddings convert each word to a vector in a 300-dimensional vector space. But how exactly do those mappings work? Well, let’s dive deeper!","headline":"From Words to Vectors: The Journey of Word Embeddings","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/embeddings/"},"url":"http://localhost:4000/posts/embeddings/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ahmed Gabr","url":"https://github.com/ahmedoy"},"dateModified":"2024-12-01T02:14:03+02:00","datePublished":"2024-11-02T14:00:00+02:00","description":"Have you ever wondered how AI models like Chat GPT and Gemini see words and sentences? Well, just like everything with AI, it’s all numbers! Words and sentences are converted to “vectors” before being passed to AI models. Vectors, if you’re not familiar with them, are just a list of numbers. As we shall see in this post, current AI models represent each word in human language by a unique list of numbers, but where it gets REALLY interesting is that the AI learns those numbers for every word completely on its own. You just have to give it a ton of data, and by data, we’re talking about a large corpus of human text, such as all of Wikipedia for example. Types of Embeddings This blog post will mostly focus on Word and Document embedding. However, the idea of embeddings applies to so much more. Embeddings, in general, are a way to convert some object, such as a word, sentence, or even an image into a vector. There are many types of embeddings and different approaches for each. This list is only a small example of the many kinds of embeddings that exist out there: Word Embeddings Numerical representations of words capture semantic relationships, allowing computers to understand and process language. Document/Sentence Embeddings Document/sentence embeddings extend the concept of word embeddings to represent entire documents or sentences as single vectors. These embeddings capture the overall meaning and context of the text. These embeddings help in tasks like semantic search, document clustering, and text summarization. Image Embeddings Image embeddings are numerical representations of images, mapping them to dense vectors in a high-dimensional space. These vectors capture an image&#39;s features, such as color, texture, and shape. Graph Embeddings Graph embeddings are numerical representations of nodes in a graph, mapping them to dense vectors in a low-dimensional space. These vectors capture the structural and semantic relationships between nodes in the graph. What are Word Embeddings? Well, word embeddings mean converting a word into a vector. To be more Mathematically precise, we’re mapping, or “embedding”, each word to some vector in a d-dimensional vector space, where d is the dimension of the vector and is the same for all words. For example, if each word gets mapped to a list of 300 numbers, our word embeddings convert each word to a vector in a 300-dimensional vector space. But how exactly do those mappings work? Well, let’s dive deeper!","headline":"From Words to Vectors: The Journey of Word Embeddings","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/embeddings/"},"url":"http://localhost:4000/posts/embeddings/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -1303,7 +1303,7 @@
 
 <time
   
-  data-ts="1733010439"
+  data-ts="1733012043"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
@@ -1470,26 +1470,6 @@
         <span id="feedback-q2"></span>
     </div>
 </div>
-
-<script>
-    function checkAnswer() {
-        const correctAnswer = "A"; // Update this if you choose another correct answer
-        const userAnswer = document.querySelector('input[name="q2"]:checked')?.value;
-
-        document.getElementById("feedback-q2").innerText = '';
-        document.getElementById("explanation-container").style.display = "none";
-
-        if (userAnswer === correctAnswer) {
-            const explanationText = "Word2Vec and GloVe are popular techniques for creating word embeddings. Word2Vec uses neural networks to create embeddings based on the context of words, while GloVe (Global Vectors for Word Representation) uses matrix factorization techniques to learn word representations. Both methods capture semantic meanings and relationships between words.";
-            document.getElementById("feedback-q2").innerHTML = "<strong>Correct!</strong> " + explanationText;
-            document.getElementById("feedback-q2").style.color = "green";
-            document.getElementById("explanation-container").style.display = "block";
-        } else {
-            document.getElementById("feedback-q2").innerHTML = "<strong>Incorrect!</strong> Try again!";
-            document.getElementById("feedback-q2").style.color = "red";
-        }
-    }
-</script>
 
 <style>
     .knowledge-check {
@@ -1721,30 +1701,6 @@
     <button id="cosine-submit-button" onclick="checkCosineAnswer()">Submit Answer</button>
 </div>
 
-<script>
-    function checkCosineAnswer() {
-        const correctAnswer = "B"; // Correct answer is B
-        const userAnswer = document.querySelector('input[name="cosine-similarity-answer"]:checked')?.value;
-
-        // Reset feedback text and hide explanation initially
-        document.getElementById("feedback-cosine").innerText = '';
-        document.getElementById("cosine-explanation-container").style.display = "none";
-
-        if (userAnswer === correctAnswer) {
-            const explanationText = "Cosine similarity measures the angle between two vectors. It’s commonly used to evaluate similarity based on direction rather than magnitude, especially in text analysis and recommendation systems.";
-            document.getElementById("feedback-cosine").innerHTML = "<strong>Correct!</strong> " + explanationText;
-            document.getElementById("feedback-cosine").style.color = "green";
-            document.getElementById("cosine-explanation-container").style.display = "block";
-        } else if (userAnswer) {
-            document.getElementById("feedback-cosine").innerHTML = "<strong>Incorrect!</strong> Try again!";
-            document.getElementById("feedback-cosine").style.color = "red";
-        } else {
-            document.getElementById("feedback-cosine").innerHTML = "<strong>Please select an answer.</strong>";
-            document.getElementById("feedback-cosine").style.color = "orange";
-        }
-    }
-</script>
-
 <style>
     .cosine-knowledge-check {
         border: 2px solid #4CAF50; /* Border color */
@@ -1971,44 +1927,6 @@
     </div>
 </div>
 
-<script>
-    function checkSkipGramAnswer() {
-        const correctAnswer = "correct"; 
-        const userAnswer = document.querySelector('input[name="q4"]:checked')?.value;
-
-        document.getElementById("feedback-q4").innerText = '';
-        document.getElementById("explanation-container").style.display = "none";
-
-        if (userAnswer === correctAnswer) {
-            const explanationText = "In the SkipGram model, the total number of parameters updated for each context/target pair is (K + 2) x d, reflecting the model's complexity in learning word associations and adapting to various contexts in the training data.";
-            document.getElementById("feedback-q4").innerHTML = "<strong>Correct!</strong> " + explanationText;
-            document.getElementById("feedback-q4").style.color = "green";
-            document.getElementById("explanation-container").style.display = "block";
-        } else {
-            document.getElementById("feedback-q4").innerHTML = "<strong>Incorrect!</strong> Try again!";
-            document.getElementById("feedback-q4").style.color = "red";
-        }
-    }
-
-    function checkSkipGramParamsAnswer() {
-        const correctAnswer = "correct"; 
-        const userAnswer = document.querySelector('input[name="q3"]:checked')?.value;
-
-        document.getElementById("feedback-q3").innerText = '';
-        document.getElementById("explanation-container-params").style.display = "none";
-
-        if (userAnswer === correctAnswer) {
-            const explanationText = "The SkipGram model has a total of 2 x d x |V| parameters, which includes weights for both input and output layers. This structure allows it to effectively predict context words based on a target word, thus capturing semantic relationships in the vocabulary.";
-            document.getElementById("feedback-q3").innerHTML = "<strong>Correct!</strong> " + explanationText;
-            document.getElementById("feedback-q3").style.color = "green";
-            document.getElementById("explanation-container-params").style.display = "block";
-        } else {
-            document.getElementById("feedback-q3").innerHTML = "<strong>Incorrect!</strong> Try again!";
-            document.getElementById("feedback-q3").style.color = "red";
-        }
-    }
-</script>
-
 <style>
     .knowledge-check {
         border: 2px solid #4CAF50; /* Border color */
@@ -2095,6 +2013,79 @@
 </div>
 
 <script>
+    function checkCosineAnswer() {
+        const correctAnswer = "B";
+        const userAnswer = document.querySelector('input[name="cosine-similarity-answer"]:checked')?.value;
+
+        document.getElementById("feedback-cosine").innerText = '';
+        document.getElementById("cosine-explanation-container").style.display = "none";
+
+        if (userAnswer === correctAnswer) {
+            const explanationText = "Cosine similarity measures the angle between two vectors. It’s commonly used to evaluate similarity based on direction rather than magnitude, especially in text analysis and recommendation systems.";
+            document.getElementById("feedback-cosine").innerHTML = "<strong>Correct!</strong> " + explanationText;
+            document.getElementById("feedback-cosine").style.color = "green";
+            document.getElementById("cosine-explanation-container").style.display = "block";
+        } else if (userAnswer) {
+            document.getElementById("feedback-cosine").innerHTML = "<strong>Incorrect!</strong> Try again!";
+            document.getElementById("feedback-cosine").style.color = "red";
+        } else {
+            document.getElementById("feedback-cosine").innerHTML = "<strong>Please select an answer.</strong>";
+            document.getElementById("feedback-cosine").style.color = "orange";
+        }
+    }
+
+    function checkAnswer() {
+        const correctAnswer = "A";
+        const userAnswer = document.querySelector('input[name="q2"]:checked')?.value;
+
+        document.getElementById("feedback-q2").innerText = '';
+        document.getElementById("explanation-container").style.display = "none";
+
+        if (userAnswer === correctAnswer) {
+            const explanationText = "Word2Vec and GloVe are popular techniques for creating word embeddings. Word2Vec uses neural networks to create embeddings based on the context of words, while GloVe (Global Vectors for Word Representation) uses matrix factorization techniques to learn word representations. Both methods capture semantic meanings and relationships between words.";
+            document.getElementById("feedback-q2").innerHTML = "<strong>Correct!</strong> " + explanationText;
+            document.getElementById("feedback-q2").style.color = "green";
+            document.getElementById("explanation-container").style.display = "block";
+        } else {
+            document.getElementById("feedback-q2").innerHTML = "<strong>Incorrect!</strong> Try again!";
+            document.getElementById("feedback-q2").style.color = "red";
+        }
+    }
+    function checkSkipGramAnswer() {
+        const correctAnswer = "correct"; 
+        const userAnswer = document.querySelector('input[name="q4"]:checked')?.value;
+
+        document.getElementById("feedback-q4").innerText = '';
+        document.getElementById("explanation-container").style.display = "none";
+
+        if (userAnswer === correctAnswer) {
+            const explanationText = "In the SkipGram model, the total number of parameters updated for each context/target pair is (K + 2) x d, reflecting the model's complexity in learning word associations and adapting to various contexts in the training data.";
+            document.getElementById("feedback-q4").innerHTML = "<strong>Correct!</strong> " + explanationText;
+            document.getElementById("feedback-q4").style.color = "green";
+            document.getElementById("explanation-container").style.display = "block";
+        } else {
+            document.getElementById("feedback-q4").innerHTML = "<strong>Incorrect!</strong> Try again!";
+            document.getElementById("feedback-q4").style.color = "red";
+        }
+    }
+
+    function checkSkipGramParamsAnswer() {
+        const correctAnswer = "correct"; 
+        const userAnswer = document.querySelector('input[name="q3"]:checked')?.value;
+
+        document.getElementById("feedback-q3").innerText = '';
+        document.getElementById("explanation-container-params").style.display = "none";
+
+        if (userAnswer === correctAnswer) {
+            const explanationText = "The SkipGram model has a total of 2 x d x |V| parameters, which includes weights for both input and output layers. This structure allows it to effectively predict context words based on a target word, thus capturing semantic relationships in the vocabulary.";
+            document.getElementById("feedback-q3").innerHTML = "<strong>Correct!</strong> " + explanationText;
+            document.getElementById("feedback-q3").style.color = "green";
+            document.getElementById("explanation-container-params").style.display = "block";
+        } else {
+            document.getElementById("feedback-q3").innerHTML = "<strong>Incorrect!</strong> Try again!";
+            document.getElementById("feedback-q3").style.color = "red";
+        }
+    }
     function checkGloVeAnswer() {
         const correctAnswer = "correct"; 
         const userAnswer = document.querySelector('input[name="q1"]:checked')?.value;
