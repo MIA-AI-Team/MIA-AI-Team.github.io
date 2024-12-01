@@ -106,26 +106,6 @@ authors: [ahmed_gabr, salma_yehia]
     </div>
 </div>
 
-<script>
-    function checkAnswer() {
-        const correctAnswer = "A"; // Update this if you choose another correct answer
-        const userAnswer = document.querySelector('input[name="q2"]:checked')?.value;
-
-        document.getElementById("feedback-q2").innerText = '';
-        document.getElementById("explanation-container").style.display = "none";
-
-        if (userAnswer === correctAnswer) {
-            const explanationText = "Word2Vec and GloVe are popular techniques for creating word embeddings. Word2Vec uses neural networks to create embeddings based on the context of words, while GloVe (Global Vectors for Word Representation) uses matrix factorization techniques to learn word representations. Both methods capture semantic meanings and relationships between words.";
-            document.getElementById("feedback-q2").innerHTML = "<strong>Correct!</strong> " + explanationText;
-            document.getElementById("feedback-q2").style.color = "green";
-            document.getElementById("explanation-container").style.display = "block";
-        } else {
-            document.getElementById("feedback-q2").innerHTML = "<strong>Incorrect!</strong> Try again!";
-            document.getElementById("feedback-q2").style.color = "red";
-        }
-    }
-</script>
-
 <style>
     .knowledge-check {
         border: 2px solid #4CAF50; /* Border color */
@@ -356,30 +336,6 @@ authors: [ahmed_gabr, salma_yehia]
     <button id="cosine-submit-button" onclick="checkCosineAnswer()">Submit Answer</button>
 </div>
 
-<script>
-    function checkCosineAnswer() {
-        const correctAnswer = "B"; // Correct answer is B
-        const userAnswer = document.querySelector('input[name="cosine-similarity-answer"]:checked')?.value;
-
-        // Reset feedback text and hide explanation initially
-        document.getElementById("feedback-cosine").innerText = '';
-        document.getElementById("cosine-explanation-container").style.display = "none";
-
-        if (userAnswer === correctAnswer) {
-            const explanationText = "Cosine similarity measures the angle between two vectors. It’s commonly used to evaluate similarity based on direction rather than magnitude, especially in text analysis and recommendation systems.";
-            document.getElementById("feedback-cosine").innerHTML = "<strong>Correct!</strong> " + explanationText;
-            document.getElementById("feedback-cosine").style.color = "green";
-            document.getElementById("cosine-explanation-container").style.display = "block";
-        } else if (userAnswer) {
-            document.getElementById("feedback-cosine").innerHTML = "<strong>Incorrect!</strong> Try again!";
-            document.getElementById("feedback-cosine").style.color = "red";
-        } else {
-            document.getElementById("feedback-cosine").innerHTML = "<strong>Please select an answer.</strong>";
-            document.getElementById("feedback-cosine").style.color = "orange";
-        }
-    }
-</script>
-
 <style>
     .cosine-knowledge-check {
         border: 2px solid #4CAF50; /* Border color */
@@ -606,44 +562,6 @@ authors: [ahmed_gabr, salma_yehia]
     </div>
 </div>
 
-<script>
-    function checkSkipGramAnswer() {
-        const correctAnswer = "correct"; 
-        const userAnswer = document.querySelector('input[name="q4"]:checked')?.value;
-
-        document.getElementById("feedback-q4").innerText = '';
-        document.getElementById("explanation-container").style.display = "none";
-
-        if (userAnswer === correctAnswer) {
-            const explanationText = "In the SkipGram model, the total number of parameters updated for each context/target pair is (K + 2) x d, reflecting the model's complexity in learning word associations and adapting to various contexts in the training data.";
-            document.getElementById("feedback-q4").innerHTML = "<strong>Correct!</strong> " + explanationText;
-            document.getElementById("feedback-q4").style.color = "green";
-            document.getElementById("explanation-container").style.display = "block";
-        } else {
-            document.getElementById("feedback-q4").innerHTML = "<strong>Incorrect!</strong> Try again!";
-            document.getElementById("feedback-q4").style.color = "red";
-        }
-    }
-
-    function checkSkipGramParamsAnswer() {
-        const correctAnswer = "correct"; 
-        const userAnswer = document.querySelector('input[name="q3"]:checked')?.value;
-
-        document.getElementById("feedback-q3").innerText = '';
-        document.getElementById("explanation-container-params").style.display = "none";
-
-        if (userAnswer === correctAnswer) {
-            const explanationText = "The SkipGram model has a total of 2 x d x |V| parameters, which includes weights for both input and output layers. This structure allows it to effectively predict context words based on a target word, thus capturing semantic relationships in the vocabulary.";
-            document.getElementById("feedback-q3").innerHTML = "<strong>Correct!</strong> " + explanationText;
-            document.getElementById("feedback-q3").style.color = "green";
-            document.getElementById("explanation-container-params").style.display = "block";
-        } else {
-            document.getElementById("feedback-q3").innerHTML = "<strong>Incorrect!</strong> Try again!";
-            document.getElementById("feedback-q3").style.color = "red";
-        }
-    }
-</script>
-
 <style>
     .knowledge-check {
         border: 2px solid #4CAF50; /* Border color */
@@ -730,6 +648,80 @@ authors: [ahmed_gabr, salma_yehia]
 </div>
 
 <script>
+    function checkCosineAnswer() {
+        const correctAnswer = "B"; // Correct answer is B
+        const userAnswer = document.querySelector('input[name="cosine-similarity-answer"]:checked')?.value;
+
+        // Reset feedback text and hide explanation initially
+        document.getElementById("feedback-cosine").innerText = '';
+        document.getElementById("cosine-explanation-container").style.display = "none";
+
+        if (userAnswer === correctAnswer) {
+            const explanationText = "Cosine similarity measures the angle between two vectors. It’s commonly used to evaluate similarity based on direction rather than magnitude, especially in text analysis and recommendation systems.";
+            document.getElementById("feedback-cosine").innerHTML = "<strong>Correct!</strong> " + explanationText;
+            document.getElementById("feedback-cosine").style.color = "green";
+            document.getElementById("cosine-explanation-container").style.display = "block";
+        } else if (userAnswer) {
+            document.getElementById("feedback-cosine").innerHTML = "<strong>Incorrect!</strong> Try again!";
+            document.getElementById("feedback-cosine").style.color = "red";
+        } else {
+            document.getElementById("feedback-cosine").innerHTML = "<strong>Please select an answer.</strong>";
+            document.getElementById("feedback-cosine").style.color = "orange";
+        }
+    }
+
+    function checkAnswer() {
+        const correctAnswer = "A"; // Update this if you choose another correct answer
+        const userAnswer = document.querySelector('input[name="q2"]:checked')?.value;
+
+        document.getElementById("feedback-q2").innerText = '';
+        document.getElementById("explanation-container").style.display = "none";
+
+        if (userAnswer === correctAnswer) {
+            const explanationText = "Word2Vec and GloVe are popular techniques for creating word embeddings. Word2Vec uses neural networks to create embeddings based on the context of words, while GloVe (Global Vectors for Word Representation) uses matrix factorization techniques to learn word representations. Both methods capture semantic meanings and relationships between words.";
+            document.getElementById("feedback-q2").innerHTML = "<strong>Correct!</strong> " + explanationText;
+            document.getElementById("feedback-q2").style.color = "green";
+            document.getElementById("explanation-container").style.display = "block";
+        } else {
+            document.getElementById("feedback-q2").innerHTML = "<strong>Incorrect!</strong> Try again!";
+            document.getElementById("feedback-q2").style.color = "red";
+        }
+    }
+    function checkSkipGramAnswer() {
+        const correctAnswer = "correct"; 
+        const userAnswer = document.querySelector('input[name="q4"]:checked')?.value;
+
+        document.getElementById("feedback-q4").innerText = '';
+        document.getElementById("explanation-container").style.display = "none";
+
+        if (userAnswer === correctAnswer) {
+            const explanationText = "In the SkipGram model, the total number of parameters updated for each context/target pair is (K + 2) x d, reflecting the model's complexity in learning word associations and adapting to various contexts in the training data.";
+            document.getElementById("feedback-q4").innerHTML = "<strong>Correct!</strong> " + explanationText;
+            document.getElementById("feedback-q4").style.color = "green";
+            document.getElementById("explanation-container").style.display = "block";
+        } else {
+            document.getElementById("feedback-q4").innerHTML = "<strong>Incorrect!</strong> Try again!";
+            document.getElementById("feedback-q4").style.color = "red";
+        }
+    }
+
+    function checkSkipGramParamsAnswer() {
+        const correctAnswer = "correct"; 
+        const userAnswer = document.querySelector('input[name="q3"]:checked')?.value;
+
+        document.getElementById("feedback-q3").innerText = '';
+        document.getElementById("explanation-container-params").style.display = "none";
+
+        if (userAnswer === correctAnswer) {
+            const explanationText = "The SkipGram model has a total of 2 x d x |V| parameters, which includes weights for both input and output layers. This structure allows it to effectively predict context words based on a target word, thus capturing semantic relationships in the vocabulary.";
+            document.getElementById("feedback-q3").innerHTML = "<strong>Correct!</strong> " + explanationText;
+            document.getElementById("feedback-q3").style.color = "green";
+            document.getElementById("explanation-container-params").style.display = "block";
+        } else {
+            document.getElementById("feedback-q3").innerHTML = "<strong>Incorrect!</strong> Try again!";
+            document.getElementById("feedback-q3").style.color = "red";
+        }
+    }
     function checkGloVeAnswer() {
         const correctAnswer = "correct"; 
         const userAnswer = document.querySelector('input[name="q1"]:checked')?.value;
