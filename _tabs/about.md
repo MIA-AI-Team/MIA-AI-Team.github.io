@@ -14,3 +14,10 @@ At M.I.A AI, we are dedicated to exploring the limitless potential of AI, drivin
 
 ![First Offline Session](./assets/img/about/first-offline-session.jpeg)
 <span style="display: block; text-align: center">**First Offline Session**</span>
+<div style="text-align: center;">
+    <div style="display: inline-block;">
+        <img src="{{ '/assets/img/about/bootcamp25-1.png' | relative_url }}" alt="ML Bootcamp 1" style="width: 300px; height: auto; margin-right: 10px;">
+        <img src="{{ '/assets/img/about/bootcamp25-2.png' | relative_url }}" alt="ML Bootcamp 2" style="width: 300px; height: auto;">
+    </div>
+    <p><b>Machine Learning Bootcamp 2025</b></p>
+</div>

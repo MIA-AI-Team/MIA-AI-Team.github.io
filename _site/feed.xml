@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>MIA AI Team</title>
   <subtitle>A hub for AI enthusiasts to collaborate on projects, review papers, write blogs, give sessions, and share insights on AI podcasts.</subtitle>
-  <updated>2024-12-01T13:47:40+02:00</updated>
+  <updated>2025-02-15T00:44:22+02:00</updated>
   <author>
     <name>mia-ai-team</name>
     <uri>http://localhost:4000/</uri>
@@ -13,7 +13,7 @@
   <link rel="alternate" type="text/html" hreflang="en"
     href="http://localhost:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
-  <rights> © 2024 mia-ai-team </rights>
+  <rights> © 2025 mia-ai-team </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
